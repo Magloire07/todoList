@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="css/output.css"> 
+    <link  type="text/css" rel="stylesheet" href="css/addTask.css"> 
+    <link  type="text/css" rel="stylesheet" href="css/App.css"> 
+    <link  type="text/css" rel="stylesheet" href="css/myTask.css"> 
+    <link  type="text/css" rel="stylesheet" href="css/editTask.css"> 
+    <link  type="text/css" rel="stylesheet" href="css/delete.css"> 
+
+
+    <title>My Task List</title>
+ 
+</head>
+<body  class="container">
+
+  <div class="overlay"  id="over">
+    <div class="modal">
+      <%- include('../partials/AddTask');%>
+      <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
+    </div>
+  </div>
+  <div class="overlay"  id="taskOver">
+    <div class="modal">
+      <%- include('../partials/listTask');%>
+      <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
+    </div>
+  </div>
+  <div class="overlay"  id="modifOver">
+    <div class="modal">
+      <%- include('../partials/modifTask');%>
+      <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
+    </div>
+  </div>
+  <div class="overlay"  id="deleteOver">
+    <div class="modal">
+      <%- include('../partials/deleteTask');%>
+      <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
+    </div>
+  </div>
+  <%- include('../partials/App'); %>
+  <script>
+     function handleCloseAddTask() {
+      try{
+            var overlay = document.getElementById('over');
+            var overlay1 = document.getElementById('taskOver');
+            var overlay2 = document.getElementById('modifOver');
+            var overlay3 = document.getElementById('deleteOver');
+
+            overlay.style.display = 'none'; // Masquer l'overlay
+            overlay1.style.display = 'none'; // Masquer l'overlay
+            overlay2.style.display = 'none'; // Masquer l'overlay
+            overlay3.style.display = 'none'; // Masquer l'overlay
+
+      }catch{
+
+      }
+        }
+     function handleAddTaskClick() {
+            var overlay = document.getElementById('over');
+            overlay.style.display = 'flex'; // Masquer l'overlay
+
+     }
+     function showTaskList() {
+            var overlay = document.getElementById('taskOver');
+            overlay.style.display = 'flex'; // Masquer l'overlay
+
+     }
+     function deleteTaskList() {
+            var overlay = document.getElementById('deleteOver');
+            overlay.style.display = 'flex'; // Masquer l'overlay
+
+     }
+     function modifTaskList() {
+            var overlay = document.getElementById('modifOver');
+            overlay.style.display = 'flex'; // Masquer l'overlay
+
+     }
+</script>
+</body>
+</html>

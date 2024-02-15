@@ -1,0 +1,43 @@
+h2{
+font-weight: bold;
+font-size: 25px ;
+}
+
+.descr{
+    display: flex;
+    height: 150px;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+.prior{
+display: flex;
+
+}
+textarea{
+    
+    margin-left: 20px ;
+    width: 450px;
+    height: 110px;
+    border: 1px solid rgb(48, 48, 48);
+    resize: none;
+    border-radius: 8px;
+}
+label{
+
+    font-weight: bold;
+    color: rgba(47, 47, 47, 0.864);
+}
+select{
+    margin-left: 50px;
+}
+.add{
+    font-weight: bold;
+    color:rgb(255, 255, 255); 
+    margin-top: 20px;
+    background-color: rgba(119, 166, 119, 0.828);
+    padding: 20px;
+    border-radius: 5px;
+
+
+}

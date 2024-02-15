@@ -1,0 +1,19 @@
+
+<div>
+    <h2>Ajouter une nouvelle tâche</h2>
+    <form action="/addTask" method="post">
+        <div class="descr">
+            <label>Description :</label>
+            <textarea name="task" rows="4" cols="50"></textarea>
+        </div>
+        <div class="prior">
+            <label>Priorité :</label>
+            <select name="priority">
+                <option value="haute">Haute</option>
+                <option value="moyenne">Moyenne</option>
+                <option value="basse" selected>Basse</option> 
+            </select>
+        </div>
+        <button class="add" type="submit">Ajouter</button>
+    </form>
+</div>

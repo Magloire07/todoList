@@ -24,19 +24,20 @@
   </div>
   <div class="overlay"  id="taskOver">
     <div class="modal">
-      <%- include('../partials/listTask');%>
+      <%- include('../partials/listTask',{objets:objets});%>
       <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
     </div>
   </div>
   <div class="overlay"  id="modifOver">
     <div class="modal">
-      <%- include('../partials/modifTask');%>
+      <%- include('../partials/modifTask',{objets:objets});%>
       <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
     </div>
   </div>
   <div class="overlay"  id="deleteOver">
     <div class="modal">
-      <%- include('../partials/deleteTask');%>
+      <%- include('../partials/deleteTask',{objets:objets});%>
+
       <button   class="close" onClick= " handleCloseAddTask()" >Fermer</button>
     </div>
   </div>

@@ -8,3 +8,37 @@
         opacity: 0.9;
         font-weight: bold;
     }
+    .modtasks{
+        height:150px ;/* ne depasse pas celui de modal*/
+        overflow-y: scroll;
+    }
+
+
+    .moddescr{
+        display: flex;
+        height: 85px;
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 35px; 
+    }
+.moddescr textarea{
+    
+    margin-left: 20px ;
+    width: 250px;
+    height: 80px;
+    border: 1px solid rgb(48, 48, 48);
+    resize: none;
+    border-radius: 8px;
+}
+
+.modadd{
+    font-weight: bold;
+    color:rgb(255, 255, 255); 
+    margin-top: 20px;
+    margin-left: 40%;
+    background-color: rgba(119, 166, 119, 0.828);
+    padding: 15px;
+    border-radius: 5px;
+
+
+}

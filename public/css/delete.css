@@ -8,3 +8,22 @@
         opacity: 0.9;
         font-weight: bold;
     }
+.supr{
+
+    margin-left: 45%;
+    padding: 10px 20px 10px 20px ;
+    background-color: orange;
+    border-radius: 8px;
+}
+.tasksdel{
+    height:390px ;/* ne depasse pas celui de modal*/
+    overflow-y: scroll;
+}
+
+.tasksdel .oneTask{
+    display: flex;
+    padding: 5px ;
+    margin: 0px  50px 0px 0px;
+    font-size: 20px;
+    justify-content: space-between;
+}

@@ -1,5 +1,14 @@
-
-<div>
-    <h2>liste des tâches </h2>
-    
+<h2>LISTE DES TACHES</h2>
+<div class="tasks">  
+   <%  if(objets) {%>
+    <ul>
+        <% objets.forEach(function(objet) { %>
+            <li class="oneTask">
+                <h3> <span>tâche:</span>  <%= objet.task %> </h3>
+                <p> <span>priorité: </span> <%= objet.priority %></p>
+            </li>
+            <hr> <!-- Ligne horizontale -->
+        <% }); %>
+    </ul>
+    <% }; %>
 </div>

@@ -8,3 +8,24 @@ align-items: center;
     opacity: 0.9;
     font-weight: bold;
 }
+
+.tasks{
+    height:420px ;/* ne depasse pas celui de modal*/
+    overflow-y: scroll;
+}
+.oneTask{
+    display: flex;
+    padding: 5px ;
+    margin: 0px  100px 0px 0px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.oneTask h3{
+    margin-right: 15px;
+}
+.oneTask span{
+    font-weight: bold;
+}
+h2{
+    font-size: 35px;
+}

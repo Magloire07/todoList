@@ -1,19 +1,38 @@
 
 <div>
     <h2>Modifier une tâche</h2>
-    <form action="/addTask" method="post">
-        <div class="descr">
-            <label>Description :</label>
-            <textarea name="task" rows="4" cols="50"></textarea>
+    <div class="modtasks">  
+        <%  if(objets) {%>
+         <ul>
+             <% objets.forEach(function(objet) { %>
+                 <li class="oneTask">
+                     <h3> <span>tâche:</span>  <%= objet.task %> </h3>
+                     <p> <span>priorité: </span> <%= objet.priority %></p>
+                 </li>
+                 <hr> <!-- Ligne horizontale -->
+             <% }); %>
+         </ul>
+         <% }; %>
+     </div>
+    <form action="/editTask" method="post">
+        <div class="moddescr">
+            <div>
+                <label> Ancienne Description :</label>
+                <textarea name="oldtask" rows="4" cols="40" required></textarea>
+           </div>
+            <div>
+                <label> nouvelle Description :</label>
+                <textarea name="task" rows="4" cols="40" required></textarea>
+            </div>
         </div>
         <div class="prior">
-            <label>Priorité :</label>
+            <label> Nouvelle Priorité :</label>
             <select name="priority">
                 <option value="haute">Haute</option>
                 <option value="moyenne">Moyenne</option>
                 <option value="basse" selected>Basse</option> 
             </select>
         </div>
-        <button class="add" type="submit">appliquer</button>
+        <button class="modadd" type="submit">appliquer</button>
     </form>
 </div>
